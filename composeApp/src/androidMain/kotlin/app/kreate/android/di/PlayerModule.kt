@@ -409,11 +409,9 @@ object PlayerModule {
             cache = cachedStreamUrl[videoId]!!
         }
 
-        val absolutePosition = uriPositionOffset + position
         YoutubeJavaScriptPlayerManager.getUrlWithThrottlingParameterDeobfuscated( videoId, cache.playableUrl )
                                       .toUri()
                                       .buildUpon()
-                                      .appendQueryParameter( "range", "$absolutePosition-${cache.contentLength}" )
                                       .appendQueryParameter( "cpn", cache.cpn )
                                       .build()
                                       .let( ::withUri )
