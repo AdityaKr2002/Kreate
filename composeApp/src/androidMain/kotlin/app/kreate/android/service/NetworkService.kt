@@ -25,6 +25,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
+import org.schabi.newpipe.extractor.NewPipe
 import timber.log.Timber
 import java.net.InetSocketAddress
 import java.net.Proxy
@@ -63,6 +64,10 @@ object NetworkService {
                     )
             }
             .build()
+            .also {
+                val downloader = NewPipeDownloaderImpl(it)
+                NewPipe.init(downloader)
+            }
     }
 
     @OptIn(ExperimentalSerializationApi::class)
