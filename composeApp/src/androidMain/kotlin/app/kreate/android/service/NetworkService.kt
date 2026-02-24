@@ -3,7 +3,6 @@ package app.kreate.android.service
 import android.widget.Toast
 import app.kreate.android.BuildConfig
 import app.kreate.android.Preferences
-import com.metrolist.innertube.models.YouTubeClient
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.okhttp.OkHttp
 import io.ktor.client.plugins.compression.ContentEncoding
@@ -20,6 +19,7 @@ import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.ClassDiscriminatorMode
 import kotlinx.serialization.json.Json
+import me.knighthat.innertube.Constants
 import me.knighthat.utils.Toaster
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -89,7 +89,7 @@ object NetworkService {
             }
 
             defaultRequest {
-                url( YouTubeClient.API_URL_YOUTUBE_MUSIC )
+                url( Constants.YOUTUBE_MUSIC_URL )
                 contentType( ContentType.Application.Json )
 
                 url {

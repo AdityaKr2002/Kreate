@@ -77,7 +77,7 @@ kotlin {
         }
         androidMain.dependencies {
             implementation(libs.kotlinx.coroutines.guava)
-            implementation(libs.extractor)
+            implementation(libs.newpipe.extractor)
             implementation(libs.nanojson)
             implementation(libs.androidx.webkit)
 
@@ -121,7 +121,6 @@ kotlin {
             implementation(projects.kugou)
             implementation(projects.lrclib)
             implementation( projects.discord )
-            implementation( projects.metrolist )
 
             // Room KMP
             implementation( libs.room.runtime )
