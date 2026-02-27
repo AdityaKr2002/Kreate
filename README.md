@@ -114,7 +114,7 @@ UI/UX designers are welcome!
 **Submit your designs by** [opening a ticket](https://github.com/knighthat/Kreate/issues/new?template=feature_request.yaml)
 
 
-# 🫂 Acknowledgements
+# 🫂 Credits
 
 | Type                                                          | Authors                                                                                                                                | Notes                                                         |
 |---------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
